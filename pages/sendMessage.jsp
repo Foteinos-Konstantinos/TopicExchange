@@ -25,7 +25,7 @@
             <a href="../pages/changePassword.html" class="animated-button">Change Password</a>
             <a href="../pages/sendMessage.jsp" class="animated-button">Send message</a>
             <a href="../pages/createTopic.html" class="animated-button">Create topic</a>
-            <a href="" class="animated-button">GitHub Repository</a>
+            <a href="https://github.com/Foteinos-Konstantinos/TopicExchange" class="animated-button">GitHub Repository</a>
             <span id="connected-user">(No connected user)</span>
         </div>
         
