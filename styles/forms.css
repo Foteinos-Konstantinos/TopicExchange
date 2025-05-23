@@ -1,0 +1,33 @@
+/*
+    Foteinos Konstantinos (2023086)
+*/
+
+form > * {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    border-radius: 10px;
+    border-style: solid;
+    border-color: white;
+    background-color: black;
+    opacity: 0.9;
+    color: white;
+    padding: 10px;
+    width: 30vw;
+    margin: auto;
+    margin-top: 10vh;
+}
+
+input {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+}

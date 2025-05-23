@@ -1,0 +1,93 @@
+/*
+    Foteinos Konstantinos (2023086)
+*/
+
+* {
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#top-bar, #bottom-bar {
+    width: 100vw;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    text-align: left;
+    height: 9vh;
+}
+
+#top-bar {
+    margin-top: 0;
+}
+
+#bottom-bar {
+    /*
+    https://omarghader.github.io/align-div-to-the-bottom-of-the-page-in-3-steps/
+    */
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+#top-bar > *, #bottom-bar > * {
+    margin: 5px;
+    display: flexbox;
+}
+
+#main-content {
+    text-align: center;
+    padding: 20px;
+    height: 82vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /*background-color: white;*/
+    background-size: cover;
+    background-image: url(https://miro.medium.com/v2/resize:fit:1400/0*p8p6_icdbz1tQT99.jpg);
+}
+
+.back-to-index {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.animated-button {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    color: white;
+    padding: 3px;
+    text-decoration: none;
+    transition-property: color, border-color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+
+.animated-button:hover {
+    color: gray;
+    border-color: gray;
+}
+
+button {
+    background-color: white;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    color: black;
+    padding: 3px;
+    text-decoration: none;
+    transition-property: color, border-color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    cursor: pointer;
+}
+
+button:hover {
+    color: gray;
+    border-color: gray;
+}
