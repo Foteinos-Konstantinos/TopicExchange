@@ -12,6 +12,10 @@ import java.util.*;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 
+/**
+ * The following class can be used as a base for other servlets.
+ */
+
 public abstract class BasicUIServlet extends HttpServlet {
 
     private final String[] paramsNames;
@@ -30,6 +34,10 @@ public abstract class BasicUIServlet extends HttpServlet {
         }
     }
 
+    /**
+     * The params are the ones needed and contained in the HTTP response.
+     */
+
     protected BasicUIServlet(String... params) {
         this.paramsNames = params;
     }
@@ -43,8 +51,10 @@ public abstract class BasicUIServlet extends HttpServlet {
     }
 
     /**
-     * DO NOT CLOSE EITHER CONNECTION OR PRINT WRITER!!
+     * DO NOT CALL ".close()" METHOD OF THE CONNECTION OBJECT !!
+     * The parameters map contains the values correspond to each parameter name given at the constructor.
      */
+
     abstract protected ExecutionResult executeCore(Map<String, String> parameters, Connection conn,
             HttpServletRequest req, HttpServletResponse resp) throws SQLException;
 

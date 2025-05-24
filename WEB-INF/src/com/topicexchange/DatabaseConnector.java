@@ -26,7 +26,12 @@ public class DatabaseConnector {
         }
     }
 
-    private DatabaseConnector(){}
+    private DatabaseConnector() {
+    }
+
+    /**
+     * The connection is NOT closed automatically.
+     */
 
     public static Connection establishConnection() {
         try {
@@ -38,14 +43,15 @@ public class DatabaseConnector {
     }
 
     /*
-     *  The following method was created in order to avoid the multiple connection establishment and save time.
-     *  Although, we usually close the connection after its use, so i have marked this as deprecated.
+     * The following method was created in order to avoid the multiple connection
+     * establishment and save time. Although, we usually close the connection 
+     * after its use, so i have marked this as deprecated.
      */
 
     @Deprecated
     public static Connection establishSingletonConnection() {
         try {
-            if(singleton==null)
+            if (singleton == null)
                 singleton = DriverManager.getConnection(DB_URL, USER, PASS);
             return singleton;
         } catch (SQLException e) {

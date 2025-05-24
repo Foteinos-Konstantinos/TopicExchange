@@ -4,6 +4,9 @@
  * 	MODIFIED ==========================
  * 
  * 	===================================
+ * 	
+ * 	Original code by prof.
+ * 	Efthymios Chondrogiannis
 */
 
 package com.topicexchange;
@@ -71,33 +74,20 @@ public class Util {
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>TopicExchange</title>
-        <link rel="stylesheet" href="./styles/main.css" />
-        <link rel="stylesheet" href="./styles/auth.css" />
-        <meta charset="utf-8">
+        <script type="text/javascript" src="./scripts/rendering.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded",()=>{
+                renderElements(".");
+            })
+        </script>
     </head>
     <body>
-        
-        <div id="top-bar">
-            <a href="./index.html" class="back-to-index">TopicExchange</a>
-            <a href="./pages/login.html" class="animated-button">Log In</a>
-            <a href="./pages/changePassword.html" class="animated-button">Change Password</a>
-			<a href="./pages/sendMessage.jsp" class="animated-button">Send message</a>
-            <a href="./pages/createTopic.html" class="animated-button">Create topic</a>
-            <a href="https://github.com/Foteinos-Konstantinos/TopicExchange" class="animated-button">GitHub Repository</a>
-            <span id="connected-user">(No connected user)</span>
-        </div>
         
         <div id="main-content">
             <div class="%s">
 				<h1>%s</h1>
 				<span>%s<span>
             </div>
-        </div>
-
-        <div id="bottom-bar">
-            <span>Foteinos Konstantinos (it2023086) @ DIT HUA</span>
-            <span>Web Dev</span>
         </div>
 
     </body>

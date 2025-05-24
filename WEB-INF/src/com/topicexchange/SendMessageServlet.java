@@ -23,6 +23,7 @@ public class SendMessageServlet extends BasicUIServlet {
 
         int topicId = Integer.parseInt(parameters.get("topics"));
 
+        //  Find the user id, saved within cookies.
         int userId = -1;
         for(Cookie cookie:req.getCookies()){
             if(cookie.getName().equals("user-id")){
@@ -38,11 +39,11 @@ public class SendMessageServlet extends BasicUIServlet {
             stmnt.setInt(2,userId);
             stmnt.setString(3,parameters.get("message").trim());
             int numRows = stmnt.executeUpdate();
-            if(numRows>0){
+            if(numRows>0){  //  numRows=1, exactly one row was inserted
                 stmnt = conn.prepareStatement("SELECT count(*) AS num_msgs FROM messages WHERE topic_id = ?");
                 stmnt.setInt(1,topicId);
-                ResultSet res = stmnt.executeQuery();
-                if(!res.next()){
+                ResultSet res = stmnt.executeQuery();   //  Retrieve the total number of messages, correspond to this topic
+                if(!res.next()){    //  The res must have exactly one row
                     execRes = new ExecutionResult(RESULT_TYPE.FAILURE, "Please try again.");
                 }else{
                     execRes = new ExecutionResult(RESULT_TYPE.SUCCESS, "Number of messages for this topic: "+res.getInt("num_msgs"));
