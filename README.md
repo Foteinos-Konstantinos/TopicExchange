@@ -14,4 +14,4 @@ Instructions to setup the webpage locally:
 
 -  Clone the repository inside the webapps folder of the Apache Tomcat Server
 -  Execute the ```run.py``` script
--  If you want only to compile the class files, use the ```--compile-only``` option
+-  If you want only to compile the Java source files, use the ```--compile-only``` option
