@@ -20,7 +20,7 @@ form.onchange = () => {
         submitButton.disabled=true;
     }else if(newPasswordField.value==oldPasswordField.value){
         messagePanel.style.color = "red";
-        messagePanel.innerText = "The should give a password different from the old one.";
+        messagePanel.innerText = "You should give a password different from the old one.";
         submitButton.disabled=true;
     }else if(newPasswordField.value.length<=5){
         messagePanel.style.color = "red";

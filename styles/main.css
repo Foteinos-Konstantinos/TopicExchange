@@ -91,3 +91,11 @@ button:hover {
     color: gray;
     border-color: gray;
 }
+
+button:disabled {
+    cursor:not-allowed;
+}
+
+button:disabled:hover {
+    cursor:not-allowed;
+}
