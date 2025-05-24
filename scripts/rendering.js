@@ -39,8 +39,8 @@ function renderElements(folder) {
         <a href="${folder}/index.html" class="back-to-index">TopicExchange</a>
         <a href="${folder}/pages/login.html" class="animated-button">Log In</a>
         <a href="${folder}/pages/changePassword.html" class="animated-button">Change Password</a>
-        <a href="${folder}/pages/sendMessage.jsp" class="animated-button">Send message</a>
-        <a href="${folder}/pages/createTopic.html" class="animated-button">Create topic</a>
+        <a href="${folder}/pages/sendMessage.jsp" class="animated-button">Send Message</a>
+        <a href="${folder}/pages/createTopic.html" class="animated-button">Create Topic</a>
         <a href="https://github.com/Foteinos-Konstantinos/TopicExchange" class="animated-button">GitHub Repository</a>
         <span id="connected-user">${(userName === null) ? '-' : userName}</span>
     </div>

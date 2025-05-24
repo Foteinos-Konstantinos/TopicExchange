@@ -8,8 +8,10 @@ if len(sys.argv)>1 and sys.argv[1].lower()=="--compile-only":
 else:
     compile_only = False
 
+delimeter = ';' if os.sep=='\\' else ':'
+
 print("\nCompiling the java source files ...\n")
-res = os.system(f"javac -cp \"..{os.sep}..{os.sep}lib{os.sep}servlet-api.jar;.{os.sep}WEB-INF{os.sep}lib{os.sep}gson-2.13.1.jar\" \
+res = os.system(f"javac -cp \"..{os.sep}..{os.sep}lib{os.sep}servlet-api.jar{delimeter}.{os.sep}WEB-INF{os.sep}lib{os.sep}gson-2.13.1.jar\" \
             -d .{os.sep}WEB-INF{os.sep}classes .{os.sep}WEB-INF{os.sep}src{os.sep}com{os.sep}topicexchange{os.sep}*.java")
 
 if res!=0:
@@ -27,7 +29,7 @@ if compile_only:
     exit()
 
 cwd = os.getcwd()
-os.chdir("..\\..")
+os.chdir(f"..{os.sep}..")
 end = 'bat' if os.sep=='\\' else 'sh'
 
 print("\nStarting Apache Tomcat ...\n")
