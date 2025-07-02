@@ -14,7 +14,7 @@ public class DatabaseConnector {
     private static final String DB_URL = "jdbc:mariadb://localhost:3306/topic_exchange";
 
     private static final String USER = "root";
-    private static final String PASS = "MARIA_DB_FOTEINOS";
+    private static final String PASS = "?????????????????????";
 
     private static Connection singleton = null;
 
